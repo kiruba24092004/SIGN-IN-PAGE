@@ -5,93 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Page</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background: #f0f0f0;
-    }
-
-    .login-box {
-      position: relative;
-      width: 350px;
-      padding: 40px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
-
-    .login-box h2 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .login-box label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-
-    .login-box input {
-      width: 100%;
-      padding: 10px 40px 10px 10px; /* space for the icon */
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-sizing: border-box;
-    }
-
-    /* Eye icon style */
-    .login-box .eye-icon {
-      position: absolute;
-      top: 115px; /* position based on password input */
-      right: 20px;
-      cursor: pointer;
-      font-size: 18px;
-      color: #888;
-      user-select: none;
-    }
-
-    .login-box button {
-      width: 100%;
-      padding: 10px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .login-box button:hover {
-      background-color: #45a049;
-    }
-
-    .options {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-
-    .options a {
-      text-decoration: none;
-      font-size: 14px;
-      color: #555;
-    }
-
-    .brand {
-      text-align: center;
-      font-size: 24px;
-      margin-bottom: 20px;
-      font-weight: bold;
-    }
-
-  </style>
 </head>
 <body>
   <div class="login-box">
@@ -127,7 +40,7 @@
       const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
       password.setAttribute('type', type);
 
-      // Toggle eye icon
+      // Optionally change the icon when toggled
       togglePassword.textContent = type === 'password' ? '\u{1F441}' : '\u{1F441}\u{FE0E}';
     });
   </script>
