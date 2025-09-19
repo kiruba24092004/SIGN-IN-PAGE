@@ -5,37 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Page</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Optional: simple styling for show password checkbox */
+    .show-password {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
     <div class="background image">
-  <!-- Brand name -->
-  <div class="brand">kirubashankar</div>
+      <!-- Brand name -->
+      <div class="brand">kirubashankar</div>
 
-  <!-- Menu icon -->
-  <div class="menu-icon">&#9776;</div>
+      <!-- Menu icon -->
+      <div class="menu-icon">&#9776;</div>
 
-  <!-- Login box -->
-  <div class="login-box">
-    <h2>Login</h2>
-    <form>
-      <label for="username">Username</label>
-      <input type="text" id="username" placeholder="Enter Username" required>
+      <!-- Login box -->
+      <div class="login-box">
+        <h2>Login</h2>
+        <form>
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Enter Username" required>
 
-      <label for="password">Password</label>
-      <input type="password" id="password" placeholder="Enter Password" required>
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter Password" required>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" placeholder="Enter Email" required>
+          <!-- Show password option -->
+          <div class="show-password">
+            <input type="checkbox" id="showPassword">
+            <label for="showPassword">Show Password</label>
+          </div>
 
-      <div class="options">
-        <label>
-          <input type="checkbox"> Remember me
-        </label>
-        <a href="#">Forgot password?</a>
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter Email" required>
+
+          <div class="options">
+            <label>
+              <input type="checkbox"> Remember me
+            </label>
+            <a href="#">Forgot password?</a>
+          </div>
+
+          <button type="submit">Submit</button>
+        </form>
       </div>
 
-      <button type="submit">Submit</button>
-    </form>
-  </div>
+      <script>
+        const passwordInput = document.getElementById('password');
+        const showPasswordCheckbox = document.getElementById('showPassword');
+
+        showPasswordCheckbox.addEventListener('change', function() {
+          if(this.checked){
+            passwordInput.type = 'text';
+          } else {
+            passwordInput.type = 'password';
+          }
+        });
+      </script>
+    </div>
 </body>
 </html>
