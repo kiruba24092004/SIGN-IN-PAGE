@@ -7,11 +7,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("images/background.jpeg") no-repeat center center/cover;
+  background: url("./background.jpg") no-repeat center center;
   background-size: cover;
-  height: 100vh;
+  background-position: center;
   color: white;
 }
+
 
 /* Brand name */
 .brand {
@@ -139,5 +140,6 @@ body {
 .navbar ul li a:hover {
   color: #00c6ff;
 }
+
 
 
